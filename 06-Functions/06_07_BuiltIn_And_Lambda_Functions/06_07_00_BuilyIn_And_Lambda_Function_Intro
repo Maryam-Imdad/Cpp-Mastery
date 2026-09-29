@@ -1,0 +1,83 @@
+#include <iostream>
+using namespace std;
+/*
+
+FILE: 06_07_00_Builtin_And_Lambda_Function_Intro.cpp
+TOPIC: 06_07 OVERVIEW - Builtin, Lambda, Function Pointers
+ROLE: Intro file for 06_07 folder
+
+
+PART A: BEGINNER - What is this folder?
+
+Till now we made our own functions (user-defined).
+Now we learn:
+1. Builtin Functions - Already made by C++ library (sqrt, pow etc)
+2. Lambda Functions - Anonymous functions, no name, C++11
+3. Function Pointers - Pointer that points to function
+
+This is final step of Functions chapter. After this 06-Functions complete.
+
+Real Life:
+Builtin = Restaurant ready-made food
+User-defined = Home cooked
+Lambda = Instant noodles - quick, no name, one time use
+Function Pointer = Remote control that can point to any TV (function)
+
+PART B: INTERMEDIATE - Why needed?
+
+- Builtin saves time, no need to write sqrt again.
+- Lambda useful with STL algorithms (sort, for_each) for custom logic inline.
+- Function Pointer allows callback - passing function to another function.
+
+PART C: ADVANCE - Roadmap of 06_07
+
+06_07_01_Builtin_Library_Functions.cpp
+  -> <cmath> sqrt, pow, <algorithm> sort, max, min
+
+06_07_02_Lambda_Functions_C++11.cpp
+  -> Anonymous func: [capture](params){body}, [=], [&]
+
+06_07_03_Function_Pointers_Basic.cpp
+  -> int (*ptr)(int,int), callback
+
+PART D: SCHOLAR - Interview Connection
+
+This folder connects to next big topics: STL, OOP.
+Lambda is heavily used in Modern C++ (C++11 onwards).
+Function Pointers is base of std::function and callbacks.
+*/
+
+void demoBuiltin(){
+    cout << "[Builtin] Ready-made, no need to write logic\n";
+}
+
+int main(){
+    cout << "================================================================\n";
+    cout << "06_07_00 - BUILTIN AND LAMBDA INTRO - OVERVIEW\n";
+    cout << "================================================================\n\n";
+
+    cout << "ROADMAP OF 06_07 FOLDER:\n";
+    cout << "1. 06_07_01_Builtin_Library_Functions\n";
+    cout << "2. 06_07_02_Lambda_Functions_C++11 + Practice\n";
+    cout << "3. 06_07_03_Function_Pointers_Basic + Practice\n";
+    cout << "----------------------------------------\n\n";
+
+    cout << "What we learn?\n";
+    cout << "A) Builtin: sqrt, pow, sort, max, min - just #include and use\n";
+    cout << "B) Lambda: [](int a){return a*a;} - no name function, one time\n";
+    cout << "C) Function Pointer: int (*p)(int,int) = add; p(2,3)=5\n\n";
+
+    cout << "Demo Builtin call:\n";
+    demoBuiltin();
+    cout << "sqrt(16) is builtin, you don't write logic\n";
+
+    cout << "Demo Lambda concept:\n";
+    auto quickAdd = [](int a, int b){ return a+b; };
+    cout << "Lambda quickAdd(2,3) = " << quickAdd(2,3) << endl;
+
+    cout << "\n================================================================\n";
+    cout << "Key: Builtin = Ready, Lambda = Anonymous quick, Fptr = Callback.\n";
+    cout << "This intro file completes 06-Functions folder structure.\n";
+    cout << "================================================================\n";
+    return 0;
+}
